@@ -55,5 +55,28 @@ namespace Kaczorek.BLTest
             // Assert (potwierdź test)
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void StaticTest()
+        {
+            // Arrange (przygotuj  test)
+            var klient1 = new Klient();
+            klient1.Imie = "Jacek";
+            Klient.Licznik += 1;
+
+            var klient2 = new Klient();
+            klient2.Imie = "Tomek";
+            Klient.Licznik += 1;
+
+            var klient3 = new Klient();
+            klient3.Imie = "Marcin";
+            Klient.Licznik += 1;
+
+            // Act (działaj)
+
+
+            // Assert (potwierdź test)
+            Assert.AreEqual(3, Klient.Licznik);
+        }
     }
 }
