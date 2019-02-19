@@ -8,6 +8,7 @@ namespace Kaczorek.BL
 {
     public class Klient
     {
+        // properties
         public static int Licznik { get; set; }
 
 
@@ -50,5 +51,52 @@ namespace Kaczorek.BL
             }
         }
 
+        // methods
+
+        public bool Zwaliduj()
+        {
+            var poprawne = true;
+
+            if (string.IsNullOrWhiteSpace(Nazwisko))
+            {
+                poprawne = false;
+            }
+            if (string.IsNullOrWhiteSpace(Email))
+            {
+                poprawne = false;
+            }
+
+            return poprawne;
+        }
+        /// <summary>
+        /// Zapisuje klienta
+        /// </summary>
+        /// <returns></returns>
+        public bool Zapisz()
+        {
+            // kod który zapisuje zdefiniowanego klienta
+            return true;
+        }
+
+        /// <summary>
+        /// Pobieramy jednego wskazanego klienta
+        /// </summary>
+        /// <param name="KlientId"></param>
+        /// <returns></returns>
+        public Klient Pobierz(int KlientId)
+        {
+            // kod, który pobiera określonego klienta
+            return new Klient();
+        }
+
+        /// <summary>
+        /// Pobiera wszystkich klientów
+        /// </summary>
+        /// <returns></returns>
+        public List<Klient> Pobierz()
+        {
+            // kod, który pobiera wszystkich klientów
+            return new List<Klient>();
+        }
     }
 }
