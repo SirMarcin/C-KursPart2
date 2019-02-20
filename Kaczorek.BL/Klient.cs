@@ -1,17 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Kaczorek.BL
 {
     public class Klient
     {
-        // properties
+        #region constructors
+        public Klient()
+        {
+
+        }
+        public Klient(int klientId)
+        {
+            KlientId = klientId;
+        }
+        #endregion
+
+        #region properties
         public static int Licznik { get; set; }
-
-
         private string _nazwisko;
         public string Nazwisko
         {
@@ -26,13 +31,9 @@ namespace Kaczorek.BL
                 _nazwisko = value;
             }
         }
-
         public string Imie { get; set; }
-
         public string Email { get; set; }
-
         public int KlientId { get; private set; }
-
         public string ImieNazwisko
         {
             get
@@ -50,9 +51,13 @@ namespace Kaczorek.BL
                 return imieNazwisko;
             }
         }
+        #endregion
 
-        // methods
-
+        #region methods
+        /// <summary>
+        /// Sprawdza dane klienta
+        /// </summary>
+        /// <returns></returns>
         public bool Zwaliduj()
         {
             var poprawne = true;
@@ -68,6 +73,7 @@ namespace Kaczorek.BL
 
             return poprawne;
         }
+
         /// <summary>
         /// Zapisuje klienta
         /// </summary>
@@ -98,5 +104,6 @@ namespace Kaczorek.BL
             // kod, który pobiera wszystkich klientów
             return new List<Klient>();
         }
+        #endregion
     }
 }

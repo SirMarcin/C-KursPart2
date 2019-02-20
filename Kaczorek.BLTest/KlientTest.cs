@@ -1,5 +1,4 @@
-﻿using System;
-using Kaczorek.BL;
+﻿using Kaczorek.BL;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Kaczorek.BLTest
@@ -7,6 +6,7 @@ namespace Kaczorek.BLTest
     [TestClass]
     public class KlientTest
     {
+        
         [TestMethod]
         public void ImieNazwiskoTest()
         {
@@ -125,6 +125,8 @@ namespace Kaczorek.BLTest
 
             // Assert (potwierdź test)
             Assert.AreEqual(oczekiwana, aktualna);
+
+            
         }
 
 
