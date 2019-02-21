@@ -89,7 +89,7 @@ namespace Kaczorek.BL
         /// </summary>
         /// <param name="KlientId"></param>
         /// <returns></returns>
-        public Klient Pobierz(int KlientId)
+        public Klient Pobierz(int klientId)
         {
             // kod, który pobiera określonego klienta
             return new Klient();
