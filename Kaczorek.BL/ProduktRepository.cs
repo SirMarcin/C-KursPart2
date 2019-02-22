@@ -12,9 +12,10 @@ namespace Kaczorek.BL
         /// <returns></returns>
         public Produkt Pobierz(int produktId)
         {
-            // kod, który pobiera określony produkt
+            //Tworzymy tymczasową instancję produktu do testów
             Produkt produkt = new Produkt(produktId);
-
+            // kod, który pobiera określony produkt
+            //tymczasowo zakodowane testowe wartości aby zwrócić klienta
             if (produktId == 1)
             {
                 produkt.AktualnaCena = 100.99m;

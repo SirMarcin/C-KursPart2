@@ -20,7 +20,7 @@ namespace Kaczorek.BL
             //Tworzymy nową instacncje klienta
             Klient klient = new Klient(klientId);
             // kod, który pobiera określonego klienta
-            //ttymczasowo zakodowane wartości aby zwrócić klienta
+            //tymczasowo zakodowane wartości aby zwrócić klienta
             if (klientId == 1)
             {
                 klient.Email = "m.buczynski93@gmail.com";
