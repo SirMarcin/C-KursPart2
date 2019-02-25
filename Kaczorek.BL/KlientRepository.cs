@@ -8,7 +8,13 @@ namespace Kaczorek.BL
 {
     public class KlientRepository
     {
-        
+        private AdresRepository adresRepository { get; set; }
+
+        public KlientRepository()
+        {
+            adresRepository = new AdresRepository();
+        }
+
 
         /// <summary>
         /// Pobieramy jednego wskazanego klienta
@@ -19,6 +25,7 @@ namespace Kaczorek.BL
         {
             //Tworzymy nową instacncje klienta
             Klient klient = new Klient(klientId);
+            klient.ListaAdresow = adresRepository.PobierzPoKlientId(klientId).ToList();
             // kod, który pobiera określonego klienta
             //tymczasowo zakodowane wartości aby zwrócić klienta
             if (klientId == 1)

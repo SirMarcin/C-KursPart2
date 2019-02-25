@@ -5,13 +5,14 @@ namespace Kaczorek.BL
     public class Klient
     {
         #region constructors
-        public Klient()
+        public Klient() : this(0)
         {
 
         }
         public Klient(int klientId)
         {
             KlientId = klientId;
+            ListaAdresow = new List<Adres>();
         }
         #endregion
 
@@ -51,6 +52,8 @@ namespace Kaczorek.BL
                 return imieNazwisko;
             }
         }
+        public List<Adres> ListaAdresow { get; set; }
+        
         #endregion
 
         #region methods
