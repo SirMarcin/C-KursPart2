@@ -25,5 +25,15 @@ namespace Kaczorek.BLTest
             Assert.AreEqual(oczekiwana.DataZamowienia, aktualna.DataZamowienia);
             Assert.AreEqual(oczekiwana.ZamowienieId, aktualna.ZamowienieId);
         }
+
+        public void PobierzZamowienieDowyswietleniaTest()
+        {
+            //Arrange
+            var zamowienieRepository = new ZamowienieRepository();
+            var oczekiwana = new WyswietlanieZamowienia()
+            {
+
+            };
+        }
     }
 }

@@ -20,6 +20,10 @@ namespace Kaczorek.BL
         #region properties
         public int ZamowienieId { get; private set; }
         public DateTimeOffset? DataZamowienia { get; set; }
+
+        public PozycjaZamowienia pozycjaZamowienia { get; set; }
+        public int KlientId { get; set; }
+        public int AdresDostawyId { get; set; }
         #endregion
 
         #region methods
