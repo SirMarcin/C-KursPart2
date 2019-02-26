@@ -53,7 +53,8 @@ namespace Kaczorek.BL
             }
         }
         public List<Adres> ListaAdresow { get; set; }
-        
+        public int TypKlienta { get; set; }
+
         #endregion
 
         #region methods
