@@ -72,6 +72,11 @@ namespace Kaczorek.BL
             // kod, który pobiera wszystkie zamowienia
             return new List<Zamowienie>();
         }
+
+        public override string ToString()
+        {
+            return DataZamowienia.Value.Date + " (" + ZamowienieId +") ";
+        }
         #endregion
     }
 }

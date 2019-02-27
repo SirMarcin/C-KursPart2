@@ -14,6 +14,10 @@ namespace Kaczorek.BL
         {
             //Tworzymy tymczasową instancję produktu do testów
             Produkt produkt = new Produkt(produktId);
+            object mojObjekt = new object();
+
+            System.Console.WriteLine("Obiekt : " + mojObjekt.ToString());
+            System.Console.WriteLine("Produkt : " + produkt.ToString());
             // kod, który pobiera określony produkt
             //tymczasowo zakodowane testowe wartości aby zwrócić klienta
             if (produktId == 1)

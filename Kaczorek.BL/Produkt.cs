@@ -72,6 +72,11 @@ namespace Kaczorek.BL
             // kod, który pobiera wszystkich klientów
             return new List<Produkt>();
         }
+
+        public override string ToString()
+        {
+            return NazwaProduktu;
+        }
         #endregion
     }
 }
