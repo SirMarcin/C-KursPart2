@@ -51,10 +51,23 @@ namespace Kaczorek.BL
         /// Zapisuje klienta
         /// </summary>
         /// <returns></returns>
-        public bool Zapisz()
+        public bool Zapisz(Klient klient)
         {
             // kod który zapisuje zdefiniowanego klienta
-            return true;
+            var sukces = true;
+
+            if (klient.MaZmiany && klient.DanePrawidlowe)
+            {
+                if (klient.JestNowy)
+                {
+                    //wywołaj procedurę insert
+                }
+                else
+                {
+                    // wywołaj procedurę update
+                }
+            }
+            return sukces;
         }
     }
     }

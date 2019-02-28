@@ -9,9 +9,12 @@
         {
             get
             {
-                return true;
+                return Zwaliduj();
             }
         }
+
+        public abstract bool Zwaliduj();
+
     }
 
     public enum StanObiektuOpcje

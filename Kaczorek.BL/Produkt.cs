@@ -2,7 +2,7 @@
 
 namespace Kaczorek.BL
 {
-    public class Produkt
+    public class Produkt : KlasaBazowa
     {
         #region constructors
         public Produkt()
@@ -27,7 +27,7 @@ namespace Kaczorek.BL
         /// Sprawdza dane produktu
         /// </summary>
         /// <returns></returns>
-        public bool Zwaliduj()
+        public override bool Zwaliduj()
         {
             var poprawne = true;
 
@@ -49,6 +49,7 @@ namespace Kaczorek.BL
         public bool Zapisz()
         {
             // kod który zapisuje zdefiniowany produkt
+
             return true;
         }
 

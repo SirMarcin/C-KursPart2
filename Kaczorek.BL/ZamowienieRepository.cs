@@ -40,10 +40,23 @@ namespace Kaczorek.BL
         /// Zapisuje zamowienie
         /// </summary>
         /// <returns></returns>
-        public bool Zapisz()
+        public bool Zapisz(Zamowienie zamowienie)
         {
             // kod który zapisuje zdefiniowane zamowienie
-            return true;
+            var sukces = true;
+
+            if (zamowienie.MaZmiany && zamowienie.DanePrawidlowe)
+            {
+                if (zamowienie.JestNowy)
+                {
+                    //wywołaj procedurę insert
+                }
+                else
+                {
+                    // wywołaj procedurę update
+                }
+            }
+            return sukces;
         }
 
         /// <summary>

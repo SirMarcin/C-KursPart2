@@ -2,7 +2,7 @@
 
 namespace Kaczorek.BL
 {
-    public class Klient
+    public class Klient : KlasaBazowa
     {
         #region constructors
         public Klient() : this(0)
@@ -62,7 +62,7 @@ namespace Kaczorek.BL
         /// Sprawdza dane klienta
         /// </summary>
         /// <returns></returns>
-        public bool Zwaliduj()
+        public override bool Zwaliduj()
         {
             var poprawne = true;
 
