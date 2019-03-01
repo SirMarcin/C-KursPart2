@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Kaczorek.BL
 {
@@ -14,12 +15,20 @@ namespace Kaczorek.BL
             ProduktId = produktId;
         }
         #endregion
-
+        
         #region properties
         public int ProduktId { get; private set; }
-        public decimal? AktualnaCena { get; set; }
+        public Decimal? AktualnaCena { get; set; }
         public string Opis { get; set; }
-        public string NazwaProduktu { get; set; }
+        private string _NazwaProduktu;
+
+        public string NazwaProduktu
+        {
+            get { return _NazwaProduktu; }
+            set { _NazwaProduktu = value; }
+        }
+
+
         #endregion
 
         #region methods

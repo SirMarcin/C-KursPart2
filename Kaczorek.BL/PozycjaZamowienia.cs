@@ -1,4 +1,6 @@
-﻿namespace Kaczorek.BL
+﻿using System;
+
+namespace Kaczorek.BL
 {
     public class PozycjaZamowienia
     {
@@ -17,7 +19,7 @@
         public int PozycjaZamowieniaId { get; private set; }
         public int Ilosc { get; set; }
         public int ProduktId { get; set; }
-        public decimal? CenaZaupu { get; set; }
+        public Decimal? CenaZaupu { get; set; }
         #endregion
 
         #region methods
