@@ -58,7 +58,7 @@ namespace Kaczorek.BL
             }
             return sukces;
         }
-
+        
         /// <summary>
         /// Pobieramy jedno zamówienie do wyświetlenia
         /// </summary>
