@@ -14,10 +14,10 @@ namespace CommonTest
             var zrodlo = "StółOgrodowy";
             var oczekiwana = "Stół Ogrodowy";
 
-            var obslugaStringa = new ObslugaStringa();
+
 
             //act
-            var aktualna = obslugaStringa.WstawSpacje(zrodlo);
+            var aktualna = zrodlo.WstawSpacje();
 
             //assert
             Assert.AreEqual(oczekiwana, aktualna);
@@ -30,10 +30,10 @@ namespace CommonTest
             var zrodlo = "Stół Ogrodowy";
             var oczekiwana = "Stół Ogrodowy";
 
-            var obslugaStringa = new ObslugaStringa();
+
 
             //act
-            var aktualna = obslugaStringa.WstawSpacje(zrodlo);
+            var aktualna = zrodlo.WstawSpacje();
 
             //assert
             Assert.AreEqual(oczekiwana, aktualna);
