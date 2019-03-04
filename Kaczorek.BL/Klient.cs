@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using Common;
+using System.Collections.Generic;
 
 namespace Kaczorek.BL
 {
-    public class Klient : KlasaBazowa
+    public class Klient : KlasaBazowa, ILogowanie
     {
         #region constructors
         public Klient() : this(0)
@@ -112,6 +113,12 @@ namespace Kaczorek.BL
         public override string ToString()
         {
             return ImieNazwisko;
+        }
+
+        public string Log()
+        {
+            var log = KlientId + ": " + ImieNazwisko + " " + "Email: " + Email + " " + "Status: " + StanObiektu.ToString();
+            return log;
         }
         #endregion
     }
